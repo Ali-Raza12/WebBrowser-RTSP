@@ -4,7 +4,7 @@ import cv2
 
 
 def generate_frames():
-    cap = cv2.VideoCapture("URL")
+    cap = cv2.VideoCapture("")
     while True:
         ret, frame = cap.read()
         if not ret:
@@ -26,6 +26,7 @@ def index():
 
 @app.route("/get_stream")
 def get_stream():
+    return video_feed()
 
 
-
+app.run(debug=True)
